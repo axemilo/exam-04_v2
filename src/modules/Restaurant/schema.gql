@@ -1,0 +1,13 @@
+type Query {
+  restaurants: [Restaurant]!
+}
+
+type Restaurant {
+  restaurantId: Int
+  restaurantName: String!
+  foodCategoryId: Int!
+}
+
+type Mutation {
+  createRestaurant(restaurantName: String!, foodCategoryId: Int!): Response!
+}

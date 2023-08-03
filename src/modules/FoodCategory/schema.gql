@@ -1,0 +1,13 @@
+type Query {
+  foodCategories: [FoodCategory]!
+}
+
+type FoodCategory {
+  foodCategoryId: Int
+  foodCategoryName: String!
+  foodCategoryImage: String!
+}
+
+type Mutation {
+  createFoodCategory(foodCategoryName: String!, foodCategoryImage: Upload!): Response!
+}

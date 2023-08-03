@@ -1,0 +1,33 @@
+type Query {
+  foods: [Food]!
+}
+
+type Food {
+  foodId: Int
+  foodName: String!
+  price: Int!
+  description: String!
+  foodCategoryId: Int!
+  foodImg: String!
+}
+
+type Mutation {
+  createFood(
+    foodName: String!
+    price: Int!
+    description: String!
+    foodCategoryId: Int!
+    foodImg: Upload!
+  ): Response!
+
+  updateFood(
+    foodId: Int!
+    foodName: String
+    price: Int
+    description: String
+    foodCategoryId: Int
+    foodImg: Upload
+  ): Response!
+
+  deleteFood(foodId: Int!): Response!
+}

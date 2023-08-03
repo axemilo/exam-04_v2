@@ -1,0 +1,7 @@
+type Response {
+  message: String!
+  token: String
+  data: Any
+}
+
+scalar Any

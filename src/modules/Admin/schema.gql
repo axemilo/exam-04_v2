@@ -1,0 +1,15 @@
+type Query {
+  admin: [Admin]!
+}
+
+type Admin {
+  adminId: Int
+  adminName: String!
+  password: String!
+}
+
+type Mutation {
+  register(adminName: String!, password: String!): Response!
+  updateAdmin(adminId: Int!, adminName: String, password: String): Response!
+  login(adminName: String!, password: String!): Response!
+}
